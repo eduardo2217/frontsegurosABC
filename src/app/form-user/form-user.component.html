@@ -1,0 +1,101 @@
+<div class="create-user-container">
+  <h2>{{titulo}}</h2>
+  <form [formGroup]="form" (ngSubmit)="save()">
+    <!-- Primer grupo: ID, First Name, Second Name -->
+    <div class="form-row">
+      <mat-form-field appearance="fill">
+        <mat-label>ID</mat-label>
+        <input matInput formControlName="id" />
+        <mat-error *ngIf="form.get('id')?.hasError('required')">
+          El ID es requerido
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>First Name</mat-label>
+        <input matInput formControlName="firstName" />
+        <mat-error *ngIf="form.get('firstName')?.hasError('required')">
+          El nombre es requerido
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Second Name</mat-label>
+        <input matInput formControlName="secondName" />
+      </mat-form-field>
+    </div>
+
+    <!-- Segundo grupo: Last Name, Second Last Name, Phone Number -->
+    <div class="form-row">
+      <mat-form-field appearance="fill">
+        <mat-label>Last Name</mat-label>
+        <input matInput formControlName="lastName" />
+        <mat-error *ngIf="form.get('lastName')?.hasError('required')">
+          El apellido es requerido
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Second Last Name</mat-label>
+        <input matInput formControlName="secondLastName" />
+        <mat-error *ngIf="form.get('secondLastName')?.hasError('required')">
+          El segundo apellido es requerido
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Phone Number</mat-label>
+        <input matInput formControlName="phoneNumber" />
+        <mat-error *ngIf="form.get('phoneNumber')?.hasError('required')">
+          El número de teléfono es requerido
+        </mat-error>
+        <mat-error *ngIf="form.get('phoneNumber')?.hasError('pattern')">
+          Número de teléfono inválido
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <!-- Tercer grupo: Email, Birth Date, Estimated Value -->
+    <div class="form-row">
+      <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" />
+        <mat-error *ngIf="form.get('email')?.hasError('required')">
+          El correo electrónico es requerido
+        </mat-error>
+        <mat-error *ngIf="form.get('email')?.hasError('email')">
+          Correo electrónico inválido
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Birth Date</mat-label>
+        <input matInput formControlName="brithDate" type="date" />
+        <mat-error *ngIf="form.get('brithDate')?.hasError('required')">
+          La fecha de nacimiento es requerida
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Estimated Value</mat-label>
+        <input matInput formControlName="estimatedValue" type="number" />
+        <mat-error *ngIf="form.get('estimatedValue')?.hasError('required')">
+          El valor estimado es requerido
+        </mat-error>
+        <mat-error *ngIf="form.get('estimatedValue')?.hasError('min')">
+          El valor debe ser mayor a 0
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <!-- Botones -->
+    <div class="form-row">
+      <button mat-raised-button type="submit" [disabled]="form.invalid">
+        Save
+      </button>
+      <button mat-raised-button type="button" routerLink="/users">
+        Cancel
+      </button>
+    </div>
+  </form>
+</div>

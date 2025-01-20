@@ -1,0 +1,96 @@
+
+.landing-container {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .problem-description {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .problem-description h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+  
+  .problem-description p {
+    font-size: 1.2em;
+    line-height: 1.5;
+  }
+  
+  .requirements-section {
+    margin-top: 40px;
+  }
+  
+  .requirements-section h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .requirements {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .requirement-card {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .requirement-card h3 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .requirement-card p {
+    font-size: 1.1em;
+    color: #555;
+  }
+  
+  .requirement-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Estilo para los estados */
+  .fulfilled {
+    background-color: #d4edda; /* verde claro */
+    border: 1px solid #28a745; /* borde verde */
+    color: #155724; /* texto verde */
+  }
+  
+  .pending {
+    background-color: #f8d7da; /* rojo claro */
+    border: 1px solid #dc3545; /* borde rojo */
+    color: #721c24; /* texto rojo */
+  }
+  
+  .status {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 4px;
+  }
+  
+  .fulfilled::before {
+    content: '✔'; /* cumplimiento */
+    margin-right: 5px;
+  }
+  
+  .pending::before {
+    content: '❌'; /* pendiente */
+    margin-right: 5px;
+  }
+  

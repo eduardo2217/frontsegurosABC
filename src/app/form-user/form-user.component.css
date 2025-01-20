@@ -1,0 +1,107 @@
+/* Contenedor del formulario */
+.create-user-container {
+    width: 100%;
+    max-width: 43.75rem; 
+    margin: 3.125rem auto; /* 50px  */
+    padding: 1.25rem; /* 20px  */
+    background-color: #ffffff;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); 
+    border-radius: 2rem; /* 4%  */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Título del formulario */
+.create-user-container h2 {
+    text-align: center;
+    font-size: 1.5rem; /* 24px  */
+    color: #333;
+    margin-bottom: 1.25rem; /* 20px  */
+}
+
+/* Contenedor de las filas */
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem; /* 20px  */
+    margin-bottom: 1.25rem; /* 20px  */
+}
+
+/* Asegurar que los campos se distribuyan adecuadamente */
+.form-row mat-form-field {
+    width: 30%;
+}
+
+/* Estilos para los botones */
+button {
+    width: 48%;
+    margin-top: 1rem; /* 16px  */
+}
+
+/* Estilo para el botón de guardar */
+button[type='submit'] {
+    background-color: #007bff;
+    color: white;
+    font-size: 1rem; /* 16px  */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+button[type='submit']:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para el botón de cancelar */
+button[type='button'] {
+    background-color: #f44336;
+    color: white;
+    font-size: 1rem; /* 16px  */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+button[type='button']:hover {
+    background-color: #d32f2f;
+}
+
+/* Diseño para los botones y márgenes */
+button[type='submit'], button[type='button'] {
+    padding: 0.75rem; /* 12px  */
+    border-radius: 2rem; /*  */
+    border: none;
+    cursor: pointer;
+}
+
+/* Estilos de texto para los errores */
+mat-error {
+    color: #e74c3c;
+    font-size: 0.75rem; /* 12px  */
+}
+
+/* Mejorar el espacio entre los campos */
+mat-form-field {
+    margin-bottom: 1.25rem; /* 20px  */
+}
+
+/* Adaptar a pantallas pequeñas */
+@media (max-width: 48em) { /* 768px  */
+    .create-user-container {
+        margin: 1.25rem; /* 20px  */
+        padding: 0.9375rem; /* 15px  */
+    }
+
+    /* Los campos de formulario se apilan en pantallas pequeñas */
+    .form-row {
+        flex-direction: column;
+    }
+
+    .form-row mat-form-field {
+        width: 100%;
+    }
+
+    /* Los botones ocupan todo el ancho en pantallas pequeñas */
+    button[type='submit'], button[type='button'] {
+        width: 100%;
+        margin-right: 0;
+    }
+}

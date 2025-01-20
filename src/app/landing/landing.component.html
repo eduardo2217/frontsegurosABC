@@ -1,0 +1,41 @@
+<div class="landing-container">
+  <!-- Descripción del problema -->
+  <section class="problem-description">
+    <h1>{{ title }}</h1>
+    <p>{{ description }}</p>
+    <p><strong>Desarrollado por:</strong> {{ developerName }}</p>
+  </section>
+
+  <!-- Requisitos del Backend -->
+  <section class="requirements-section">
+    <h2>Requisitos Técnicos</h2>
+    <div class="requirements">
+      <div class="requirement-card" *ngFor="let item of backendRequirements">
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.status }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Requisitos del Frontend -->
+  <section class="requirements-section">
+    <h2>Requisitos del Frontend</h2>
+    <div class="requirements">
+      <div class="requirement-card" *ngFor="let item of frontendRequirements">
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.status }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bonus -->
+  <section class="requirements-section">
+    <h2>Bonus</h2>
+    <div class="requirements">
+      <div class="requirement-card" *ngFor="let item of bonusItems">
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.status }}</p>
+      </div>
+    </div>
+  </section>
+</div>

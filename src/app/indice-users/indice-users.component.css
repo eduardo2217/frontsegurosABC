@@ -1,0 +1,82 @@
+/* Estilos para la tabla */
+table {
+  width: 100%;
+  margin-top: 20px;
+  margin: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 2rem;
+  border-collapse: collapse; /* Asegura que los bordes colapsen */
+}
+
+/* Estilo para las celdas (th, td) */
+th, td {
+  padding: 16px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Estilo para las cabeceras de la tabla */
+th {
+  background-color: #f5f5f5;
+  font-weight: bold;
+}
+
+/* Estilo para las celdas de la tabla */
+td {
+  background-color: #ffffff;
+}
+
+/* Efecto hover para las filas */
+tr:hover {
+  background-color: #f2f2f2; /* Cambio de color cuando pasas el mouse sobre la fila */
+}
+
+/* Bordes redondeados para la primera fila de encabezados (ID hasta Actions) */
+tr:first-child th:first-child {
+  border-top-left-radius: 2rem;
+}
+
+tr:first-child th:last-child {
+  border-top-right-radius: 2rem;
+}
+
+/* Bordes redondeados para la última fila de la tabla (Actions) */
+tr:last-child td:first-child {
+  border-bottom-left-radius: 2rem;
+}
+
+tr:last-child td:last-child {
+  border-bottom-right-radius: 2rem;
+}
+
+/* Estilos para los botones dentro de las celdas de acciones */
+button {
+  margin-right: 0.5rem;  /* Separación de los botones de 0.5rem */
+  padding: 8px 16px;
+  margin-top: 1rem;
+}
+
+/* Estilo para las cabeceras de la tabla */
+.mat-header-cell {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Estilo para las filas de la tabla */
+.mat-row {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Mejorar el estilo de los botones en la tabla */
+button.mat-flat-button {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 6px 12px;
+}
+
+/* Color de fila cuando el mouse pasa sobre la fila */
+tr:hover {
+  background-color: #f2f2f2;
+}
